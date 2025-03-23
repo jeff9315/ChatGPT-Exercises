@@ -1,0 +1,74 @@
+# Jeff specific files
+template.py
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.txt
+*.egg
+MANIFEST
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# MariaDB related files (if you have any local config or data files)
+*.cnf # MariaDB configuration files (if you store them locally)
+*.sql # SQL dump files (if you have them locally)
+*.ibd # InnoDB table data files (if you're using a local dev instance)
+*.frm # Table definition files
+*.myd # MyISAM data files
+*.myi # MyISAM index files
+*.log # MariaDB log files (if you store them locally)
+data/ # If you have a local dev database in a 'data' folder
+# Add any other MariaDB specific files/folders that you don't want to track.
+
+# OS generated files
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE Specific files
+.idea/
+*.pyproj
+*.sln
+*.suo
+*.ntvs*
+*.njsproj
+*.user
+*.bak
+*.log
+*.rpt
