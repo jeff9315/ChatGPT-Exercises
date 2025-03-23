@@ -1,8 +1,10 @@
 """Main"""
 
 from utils.helper_functions import startup
+from utils.challenge_4_sorts_and_filters import print_people, sort_people
 from models.person import Person
 from models.vehicle import Vehicle
+
 
 startup()
 
@@ -13,12 +15,23 @@ car3 = Vehicle("Tesla", "Model 3", 2022)
 
 # People
 people = [
-    Person("Jeff Miller", age=45, email="jeff@example.com", vehicle=car1),
+    Person("    Jeff     Miller    ", age=45,
+           email="jeff@example.com", vehicle=car1),
     Person("Alice Johnson", age=30, email="alice@example.com", vehicle=car3),
     Person("Bob Smith", age=50, email="bob@example.com", vehicle=car2),
     Person("Cathy Brown", age=22, email="cathy@example.com"),
     Person("Dan Adams", age=35, email="dan@example.com"),
 ]
+
+print("\n\n===== People By Name =====")
+print_people(sort_people(people, sort_by="name"))
+
+print("\n\n===== People By Age ===== ")
+print_people(sort_people(people, sort_by="age"))
+
+
+print("\n\n===== People By Descending Vehicle Date ===== ")
+print_people(sort_people(people, sort_by="vehicle"))
 
 
 try:
@@ -33,15 +46,14 @@ except ValueError as e:
     print("❌ Error creating person or car:", e)
     print('a')
 
-quit()
 
-# try:
-#     print("\n======= P0 ========\n")
-#     p0 = Person("John Doe")
-#     print(p0)
-#     print(p0.get_info())
-# except ValueError as e:
-#     print("❌ Error creating person:", e)
+try:
+    print("\n======= P0 ========\n")
+    p0 = Person("John Doe")
+    print(p0)
+    print(p0.get_info())
+except ValueError as e:
+    print("❌ Error creating person:", e)
 
 
 try:

@@ -1,5 +1,8 @@
 # Readme
-* This project is for ChatGPT tyo help Jeff learn Python. Most exrercises will be using these classes
+* It's of no use to anyone but me!
+
+* Most exercises will be using these classes
   * People
   * Vehicles
-  * 
+
+See [Challenge 4](docs/challenge_4.md)

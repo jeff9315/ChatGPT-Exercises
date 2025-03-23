@@ -8,8 +8,9 @@ Common utilities and imports for Jeff's projects
 
 import datetime
 import re
-from collections import Counter
+from typing import Literal
 from typing import TypeVar
+from collections import Counter
 import subprocess
 from dateutil import parser
 

@@ -37,7 +37,6 @@ Then show me your updated test output! I’ll review it when you’re done. 🚀
 class Vehicle:
     """
     Vehicle
-
     """
 
     def __init__(self, make: str, model: str, year: int):
