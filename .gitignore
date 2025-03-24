@@ -1,5 +1,31 @@
-# Jeff specific files
+# Jeff personal files
 template.py
+commit_notes.md
+
+# VSCode
+.vscode/
+
+# Logs and caches
+*.log
+.cache/
+logs/
+tmp/
+
+# Syncthing
+.stfolder
+.stignore
+
+# Test Realted: Pytest or Unit test artifacts
+.pytest_cache/
+htmlcov/
+coverage.xml
+.cache/
+
+# Type Checking Tools: MyPy / Pylint / 
+.mypy_cache/
+.dmypy.json
+.pyre/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

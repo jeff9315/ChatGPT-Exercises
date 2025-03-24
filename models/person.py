@@ -84,13 +84,17 @@ Add some tests in your main.py file to try both valid and invalid inputs.
 Paste your updated Person class here when you're ready and I’ll give feedback!
 """
 
+from typing import Optional
+
 from utils.helper_functions import re
+
+from .vehicle import Vehicle
 
 
 class Person:
     """Person"""
 
-    def __init__(self, name: str, age: int = 0, email: str = "", vehicle=None):
+    def __init__(self, name: str, age: int = 0, email: str = "", vehicle: Optional[Vehicle] = None):
         self.name = name.title().strip()
         self.name = re.sub(" +", " ", self.name)
         self.age = age
@@ -117,7 +121,7 @@ class Person:
         return f"{self.name} ({self.age}) <{self.email}> — drives a {self.vehicle}"
         # return f"{{'name': '{self.name}', 'age': {self.age}, 'email': '{self.email}'}}"
 
-    def get_info(self):
+    def get_info(self) -> dict[str, object]:
         """
         returns a dictionary of the person's attributes.   
         """

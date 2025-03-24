@@ -1,10 +1,10 @@
 """Main"""
 
-from utils.helper_functions import startup
-from utils.challenge_4_sorts_and_filters import print_people, sort_people
 from models.person import Person
 from models.vehicle import Vehicle
-
+from utils.helper_functions import startup
+from utils.print_people import print_people
+from utils.sort_people import sort_people
 
 startup()
 
@@ -31,7 +31,10 @@ print_people(sort_people(people, sort_by="age"))
 
 
 print("\n\n===== People By Descending Vehicle Date ===== ")
-print_people(sort_people(people, sort_by="vehicle"))
+try:
+    print_people(sort_people(people, sort_by="vehicle_year"))
+except Exception as e:
+    print(e)
 
 
 try:
@@ -51,7 +54,7 @@ try:
     print("\n======= P0 ========\n")
     p0 = Person("John Doe")
     print(p0)
-    print(p0.get_info())
+    print(f"{p0.get_info()}")
 except ValueError as e:
     print("❌ Error creating person:", e)
 
@@ -60,7 +63,7 @@ try:
     print("\n========== P1 =====\n")
     person = Person("    John      Doe     ", email="john@example.com", age=35)
     print(person)
-    print(person.get_info())
+    print(f"{person.get_info()}")
 except ValueError as e:
     print("❌ Error creating person:", e)
     print('a')
@@ -70,7 +73,7 @@ try:
     print("\n========== P2 =====\n")
     person = Person("    John      Doe     ", -0, "john@example.com")
     print(person)
-    print(person.get_info())
+    print(f"{person.get_info()}")
 except ValueError as e:
     print("❌ Error creating person:", e)
 
@@ -78,7 +81,7 @@ try:
     print("\n========== P3 =====\n")
     person = Person("    John      Doe     ", 35, "john@example.com")
     print(person)
-    print(person.get_info())
+    print(f"{person.get_info()}")
 except ValueError as e:
     print("❌ Error creating person:", e)
 
@@ -86,7 +89,7 @@ try:
     print("\n========== P4 =====\n")
     person = Person("    John      Doe     ", 35, "john.jones@example.com")
     print(person)
-    print(person.get_info())
+    print(f"{person.get_info()}")
 except ValueError as e:
     print("❌ Error creating person:", e)
 
@@ -94,7 +97,7 @@ try:
     print("\n========== ERR1 =====\n")
     person = Person("    John      Doe     ", -7, "john@example.com")
     print(person)
-    print(person.get_info())
+    print(f"{person.get_info()}")
 except ValueError as e:
     print("❌ Error creating person:", e)
 
@@ -102,7 +105,7 @@ try:
     print("\n========== ERR2 =====\n")
     person = Person("    John      Doe     ", 35, "john@exa@mple.com")
     print(person)
-    print(person.get_info())
+    print(f"{person.get_info()}")
 except ValueError as e:
     print("❌ Error creating person:", e)
 
@@ -110,7 +113,7 @@ try:
     print("\n========== ERR3 =====\n")
     person = Person("    John      Doe     ", 35, "johnexample.com")
     print(person)
-    print(person.get_info())
+    print(f"{person.get_info()}")
 except ValueError as e:
     print("❌ Error creating person:", e)
 
@@ -118,6 +121,8 @@ try:
     print("\n========== ERR4 =====\n")
     person = Person("    John      Doe     ", 35, "john.jones@examplecom")
     print(person)
-    print(person.get_info())
+    print(f"{person.get_info()}")
 except ValueError as e:
     print("❌ Error creating person:", e)
+
+
