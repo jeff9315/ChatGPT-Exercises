@@ -17,6 +17,8 @@ car3 = Vehicle("Tesla", "Model 3", 2022)
 people = [
     Person("    Jeff     Miller    ", age=45,
            email="jeff@example.com", vehicle=car1),
+    Person("    Jeff     Miller    ", age=45,
+           email="jeff@example.com", vehicle=car1),
     Person("Alice Johnson", age=30, email="alice@example.com", vehicle=car3),
     Person("Bob Smith", age=50, email="bob@example.com", vehicle=car2),
     Person("Cathy Brown", age=22, email="cathy@example.com"),
